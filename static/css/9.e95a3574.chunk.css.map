@@ -1,0 +1,1 @@
+{"version":3,"sources":["ScoreCardComponent.css"],"names":[],"mappings":"AAAA,0BACI,aAAgB,CAChB,eACJ","file":"9.e95a3574.chunk.css","sourcesContent":[".score__card--breadcrumbs{\r\n    margin: 20px 0px;\r\n    font-weight: bold;\r\n}\r\n\r\n"]}

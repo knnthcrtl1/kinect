@@ -1,0 +1,1 @@
+{"version":3,"sources":["CoachingLogsComponent.css"],"names":[],"mappings":"AAAA,6BACI,aAAgB,CAChB,eACJ","file":"6.fc028217.chunk.css","sourcesContent":[".coaching__logs--breadcrumbs{\r\n    margin: 20px 0px;\r\n    font-weight: bold;\r\n}\r\n\r\n"]}
