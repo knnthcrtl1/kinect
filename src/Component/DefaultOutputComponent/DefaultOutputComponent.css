@@ -1,0 +1,15 @@
+.default__output__component{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.default__output__component--title{
+    flex: 1;
+}
+
+.default__output__component--sub--title {
+    flex: 1;
+    margin-top: 10px;
+}

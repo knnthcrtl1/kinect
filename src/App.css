@@ -1,0 +1,51 @@
+@font-face{
+  font-family: 'Poppins', sans-serif;
+  src: url(./Assets/Fonts/poppins.woff);
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #e1e1e1;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+}
+
+ol{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+span{
+  font-family: 'Poppins', sans-serif;
+}
+
+*, *:after, *:before{
+  box-sizing: border-box;
+}
+
+.container{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.row{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.txt-center{
+  text-align: center;
+}
+
+.marginTop20{
+    margin-top: 20px;
+}

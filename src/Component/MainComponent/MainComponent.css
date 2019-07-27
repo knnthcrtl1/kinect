@@ -1,0 +1,60 @@
+.main__component--content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.sidebar__component {
+    flex: 1;
+    flex-basis: 30%;
+    border-radius: 6px;
+    background-color: #FFF;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    padding: 15px 20px;
+}
+
+.sidebar__nav__list ol{
+    padding-left: 40px;
+}
+
+.output__component ol{
+    padding-left: 20px;
+}
+
+.output__component {
+    display: flex;
+    flex: 1;
+    flex-basis: 80%;
+    margin-left: 70px;
+    border-radius: 6px;
+    background-color: #FFF;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    padding: 15px 20px;
+    flex-direction: column;
+    min-height: 683px;
+}
+
+.default__output__component{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.default__output__component--title{
+    flex: 1;
+}
+
+.default__output__component--sub--title {
+    flex: 1;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+img.output-img {
+    width: 100%;
+    max-width: 780px;
+    border: 1px solid #555555;
+}
