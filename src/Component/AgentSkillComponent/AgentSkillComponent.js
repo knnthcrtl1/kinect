@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import './AgentSkillComponent.css';
 import Title from '../TitleComponent/TitleComponent';
 import agentSkillAssignmentImage from '../../Assets/Resources/agent_skill_assignment.jpg';
+import agentSkillList from '../../Assets/Resources/agent_list.jpg';
 
 export default class AgentSkillComponent extends Component {
     render() {
+
+        const { modalImageClick } = this.props;
+
         return (
             <div className="agent_skill">
                 <div className="agent_skill--title txt-center">
@@ -15,7 +19,7 @@ export default class AgentSkillComponent extends Component {
                 <div className="agent_skill--content">
                     <div className="agent_skill__skill__assignment" id="skillAssignment">
                         <div class="agent_skill__skill__assignment--image output-img ">
-                            <img src={agentSkillAssignmentImage} alt="" className="output-img" />
+                            <img src={agentSkillAssignmentImage} alt="" className="output-img" onClick={() => modalImageClick(agentSkillAssignmentImage)} />
                         </div>
                         <div className="agent_skill__skill__assignment--breadcrumbs">
                             <span>NAVIGATION: SETUP > SKILL ASSIGNMENT</span>
@@ -64,6 +68,9 @@ export default class AgentSkillComponent extends Component {
 
                 <div className="agent_skill--content">
                     <div className="agent_skill__list__of__agents" id="listofAgents">
+                        <div class="agent_skill__skill__assignment--image output-img ">
+                            <img src={agentSkillList} alt="" className="output-img" onClick={() => modalImageClick(agentSkillList)} />
+                        </div>
                         <div class="agent_skill__list__of__agents--breadcrumbs">
                             <span>NAVIGATION: AGENT > LIST OF AGENTS</span>
                         </div>

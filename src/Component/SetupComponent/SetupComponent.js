@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 import './SetupComponent.css';
 import Title from '../TitleComponent/TitleComponent';
-import agentSkillImage from '../../Assets/Resources/agent_skill.jpg';
+import agentSkillImage from '../../Assets/Resources/criteria_name.jpg';
+import criteriaClass from '../../Assets/Resources/criter_class.jpg';
+import criteriaName from '../../Assets/Resources/criteria_name.jpg';
+import criteriaAssign from '../../Assets/Resources/criteria_assignment.jpg';
+import scoreStructure from '../../Assets/Resources/score_struucture.jpg';
+import trainigMat from '../../Assets/Resources/training_materials.jpg';
+import rollOut from '../../Assets/Resources/roll_out.jpg';
 
 export default class SetupComponent extends Component {
+
     render() {
+
+        const { modalImageClick } = this.props;
+
         return (
             <div className="setup__component">
                 <div className="setup__component--title txt-center">
@@ -15,9 +25,9 @@ export default class SetupComponent extends Component {
                 <div className="setup__component--content">
                     <div className="setup__component__agent__skill" id="agentSkill">
                         <div className="agent_skill__skill__assignment--image">
-                            <img src={agentSkillImage} alt="" className="output-img" />
+                            <img src={agentSkillImage} alt="" className="output-img" onClick={() => modalImageClick(agentSkillImage)} />
                         </div>
-                        <div class="setup__component__agent__skill--breadcrumbs">
+                        <div className="setup__component__agent__skill--breadcrumbs">
                             <span>NAVIGATION: SETUP > AGENT SKILL</span>
                         </div>
                         <div className="setup__component__agent__skill--content">
@@ -48,7 +58,10 @@ export default class SetupComponent extends Component {
                     </div>
 
                     <div className="setup__component__criteria__classification" id="criteriaClassification">
-                        <div class="setup__component__criteria__classification--breadcrumbs">
+                        <div className="agent_skill__skill__assignment--image">
+                            <img src={criteriaClass} alt="" className="output-img" onClick={() => modalImageClick(criteriaClass)} />
+                        </div>
+                        <div className="setup__component__criteria__classification--breadcrumbs">
                             <span>NAVIGATION: SETUP > CRITERIA CLASSIFICATION</span>
                         </div>
                         <div className="setup__component__criteria__classification--content">
@@ -82,7 +95,10 @@ export default class SetupComponent extends Component {
                     </div>
 
                     <div className="setup__component__criteria__name" id="criteriaName">
-                        <div class="setup__component__criteria__name--breadcrumbs">
+                        <div className="agent_skill__skill__assignment--image">
+                            <img src={criteriaName} alt="" className="output-img" onClick={() => modalImageClick(criteriaName)} />
+                        </div>
+                        <div className="setup__component__criteria__name--breadcrumbs">
                             <span>NAVIGATION: SETUP > CRITERIA NAME</span>
                         </div>
                         <div className="setup__component__criteria__name--content">
@@ -133,7 +149,10 @@ export default class SetupComponent extends Component {
                     </div >
 
                     <div className="setup__component__criteria__assignment" id="criteriaAssignment">
-                        <div class="setup__component__criteria__assignment--breadcrumbs">
+                        <div className="agent_skill__skill__assignment--image">
+                            <img src={criteriaAssign} alt="" className="output-img" onClick={() => modalImageClick(criteriaAssign)} />
+                        </div>
+                        <div className="setup__component__criteria__assignment--breadcrumbs">
                             <span>NAVIGATION: SETUP > CRITERIA ASSIGNMENT</span>
                         </div>
                         <div className="setup__component__criteria__assignment--content">
@@ -186,7 +205,10 @@ export default class SetupComponent extends Component {
                     </div>
 
                     <div className="setup__component__score__structure" id="scoreStructure">
-                        <div class="setup__component__score__structure--breadcrumbs">
+                        <div className="agent_skill__skill__assignment--image">
+                            <img src={scoreStructure} alt="" className="output-img" onClick={() => modalImageClick(scoreStructure)} />
+                        </div>
+                        <div className="setup__component__score__structure--breadcrumbs">
                             <span>NAVIGATION: SETUP > SCORE SCTRUCTURE</span>
                         </div>
                         <div className="setup__component__score__structure--content">
@@ -225,7 +247,10 @@ export default class SetupComponent extends Component {
                     </div>
 
                     <div className="setup__component__training__manuals" id="trainingMaterials">
-                        <div class="setup__component__training__manuals--breadcrumbs">
+                        <div className="agent_skill__skill__assignment--image">
+                            <img src={trainigMat} alt="" className="output-img" onClick={() => modalImageClick(trainigMat)} />
+                        </div>
+                        <div className="setup__component__training__manuals--breadcrumbs">
                             <span>NAVIGATION: SETUP > TRAINING MANUALS</span>
                         </div>
                         <div className="setup__component__training__manuals--content">
@@ -252,7 +277,10 @@ export default class SetupComponent extends Component {
                     </div>
 
                     <div className="setup__component__rollout__bulletin" id="rolloutBulletin">
-                        <div class="setup__component__rollout__bulletin--breadcrumbs">
+                        <div className="agent_skill__skill__assignment--image">
+                            <img src={rollOut} alt="" className="output-img" onClick={() => modalImageClick(rollOut)} />
+                        </div>
+                        <div className="setup__component__rollout__bulletin--breadcrumbs">
                             <span>NAVIGATION: SETUP > ROLL OUT BULLETIN</span>
                         </div>
                         <div className="setup__component__rollout__bulletin--content">
