@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kinect/precache-manifest.95314ad5f662ff6af982f6861eef3c5c.js"
+  "/kinect/precache-manifest.7962eff72804d87aefd709d3131b1765.js"
 );
 
 self.addEventListener('message', (event) => {

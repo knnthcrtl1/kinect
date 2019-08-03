@@ -1,0 +1,1 @@
+{"version":3,"sources":["AgentSkillComponent.css"],"names":[],"mappings":"AAAA,yFAEI,aAAgB,CAChB,eACJ","file":"5.d432a4d4.chunk.css","sourcesContent":[".agent_skill__skill__assignment--breadcrumbs,\r\n.agent_skill__list__of__agents--breadcrumbs {\r\n    margin: 20px 0px;\r\n    font-weight: bold;\r\n}\r\n\r\n"]}
