@@ -31,13 +31,17 @@ export default class App extends Component {
 
     window.onscroll = () => this.myFunction()
 
-    console.log(this.state.showScroller)
+    const { showScroller } = this.state;
 
     return (
       <div className="app" ref={el => this.appClass = el}>
         <HeaderComponent />
         <MainComponent />
-        <ScrollToTopComponent />
+
+        {(showScroller) ?
+          <ScrollToTopComponent />
+          : null
+        }
       </div >
     )
   }
