@@ -1,0 +1,1 @@
+{"version":3,"sources":["ReportsComponent.css"],"names":[],"mappings":"AAAA,iCACI,aAAgB,CAChB,eACJ","file":"3.cbd4e793.chunk.css","sourcesContent":[".reports__component--breadcrumbs{\r\n    margin: 20px 0px;\r\n    font-weight: bold;\r\n}\r\n\r\n"]}
