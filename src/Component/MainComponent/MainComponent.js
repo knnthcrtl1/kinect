@@ -89,11 +89,18 @@ export default class MainComponent extends Component {
                                             <li>
                                                 <Link to="/reports">9. Reports</Link>
                                                 <ol type="a">
-                                                    <li>Average Report</li>
-                                                    <li>Infraction Report</li>
-                                                    <li>Fatal Error Report</li>
-                                                    <li>Evaluation Report</li>
-                                                    <li>Master list</li>
+                                                    <li>Average Report
+                                                        <ul>
+                                                            <li><AnchorLink to="/reports#weeklyReport">Weekly</AnchorLink></li>
+                                                            <li><AnchorLink to="/reports#monthlyReport">Monthly</AnchorLink></li>
+                                                            <li><AnchorLink to="/reports#quarterlyReport">Quarterly/Yearly</AnchorLink></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><AnchorLink to="/reports#qaEvaluation">QA Evaluation</AnchorLink></li>
+                                                    <li><AnchorLink to="/reports#infractionReport">Infraction Report</AnchorLink></li>
+                                                    <li><AnchorLink to="/reports#fatalReport">Fatal Error Report</AnchorLink></li>
+                                                    <li><AnchorLink to="/reports#evaluationReport">Evaluation Report</AnchorLink></li>
+                                                    <li><AnchorLink to="/reports#masterList">Master list</AnchorLink></li>
                                                 </ol>
                                             </li>
                                             <li>10. User Access</li>
