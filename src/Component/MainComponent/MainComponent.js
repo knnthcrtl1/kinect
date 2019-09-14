@@ -4,16 +4,49 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { HashLink as AnchorLink } from 'react-router-hash-link';
 import Title from '../TitleComponent/TitleComponent';
 
-const defaultOutputComponent = lazy(() => import('../DefaultOutputComponent/DefaultOutputComponent'));
-const setupCommponent = lazy(() => import('../SetupComponent/SetupComponent'));
-const agentSkillComponent = lazy(() => import('../AgentSkillComponent/AgentSkillComponent'));
-const scoreCardComponent = lazy(() => import('../ScoreCardComponent/ScoreCardComponent'));
-const coachingLogsComponent = lazy(() => import('../CoachingLogsComponent/CoachingLogsComponent'));
-const kinectAcademy = lazy(() => import('../KinectAcademy/KinectAcademy'));
-const reportsComponent = lazy(() => import('../ReportsComponent/ReportsComponent'))
+import ModalImageComponent from '../ModalImageComponent/ModalImageComponent';
+
+
+const DefaultOutputComponent = lazy(() => import('../DefaultOutputComponent/DefaultOutputComponent'));
+const SetupCommponent = lazy(() => import('../SetupComponent/SetupComponent'));
+const AgentSkillComponent = lazy(() => import('../AgentSkillComponent/AgentSkillComponent'));
+const ScoreCardComponent = lazy(() => import('../ScoreCardComponent/ScoreCardComponent'));
+const CoachingLogsComponent = lazy(() => import('../CoachingLogsComponent/CoachingLogsComponent'));
+const KinectAcademy = lazy(() => import('../KinectAcademy/KinectAcademy'));
+const ReportsComponent = lazy(() => import('../ReportsComponent/ReportsComponent'))
+
+
 
 export default class MainComponent extends Component {
+
+    state = {
+        modalImg: null,
+        modalComponent: false
+    }
+
+    modalImageClick = (agentSkillImage) => {
+
+        this.setState({
+            modalImg: agentSkillImage,
+            modalComponent: true
+        })
+
+    }
+
+    modalImageClose = (test) => {
+
+        console.log(test);
+
+        this.setState({
+            modalComponent: false
+        })
+
+    }
+
     render() {
+
+        const { modalImg, modalComponent } = this.state;
+
         return (
             <div className="main__component">
                 <div className="container">
@@ -70,16 +103,26 @@ export default class MainComponent extends Component {
                                 <div className="output__component">
                                     <Suspense fallback={<div style={{ width: '100%', textAlign: 'center' }}>Loading...</div>}>
                                         <Switch>
-                                            <Route exact path="/" component={defaultOutputComponent} />
-                                            <Route path="/skills" component={setupCommponent} />
-                                            <Route path="/agent-skill" component={agentSkillComponent} />
-                                            <Route path="/score-card" component={scoreCardComponent} />
-                                            <Route path="/coaching-logs" component={coachingLogsComponent} />
-                                            <Route path="/kinect-academy" component={kinectAcademy} />
-                                            <Route path="/reports" component={reportsComponent} />
+                                            <Route exact path={'/'} component={() => <DefaultOutputComponent />} />
+                                            <Route path={'/skills'} component={() => <SetupCommponent modalImageClick={this.modalImageClick} />} />
+                                            <Route path={'/agent-skill'} component={() => <AgentSkillComponent modalImageClick={this.modalImageClick} />} />
+                                            <Route path={'/score-card'} component={() => <ScoreCardComponent modalImageClick={this.modalImageClick} />} />
+                                            <Route path={'/coaching-logs'} component={() => <CoachingLogsComponent modalImageClick={this.modalImageClick} />} />
+                                            <Route path={'/kinect-academy'} component={() => <KinectAcademy modalImageClick={this.modalImageClick} />} />
+                                            <Route path={'/reports'} component={() => <ReportsComponent modalImageClick={this.modalImageClick} />} />
                                         </Switch>
                                     </Suspense>
                                 </div >
+                                {(modalComponent) ?
+                                    <div className="main__modal--component" onClick={this.modalImageClose}>
+                                        <ModalImageComponent
+                                            modalImg={(modalImg)}
+                                            modalImageClose={this.modalImageClose}
+                                        />
+
+                                    </div>
+                                    : null
+                                }
                             </Router>
                         </div>
                     </div>

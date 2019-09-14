@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './KinectAcademy.css';
 import Title from '../TitleComponent/TitleComponent';
+import kinectAcademyImg from '../../Assets/Resources/kinect_academy.jpg';
 
 export default class KinectAcademy extends Component {
     render() {
+
+        const { modalImageClick } = this.props;
+
         return (
             <div className="kinect__academy">
                 <div className="kinect__academy--title txt-center">
@@ -12,6 +16,9 @@ export default class KinectAcademy extends Component {
                     </Title>
                 </div>
                 <div className="kinect__academy--content">
+                    <div class="agent_skill__skill__assignment--image output-img ">
+                        <img src={kinectAcademyImg} alt="" className="output-img" onClick={() => modalImageClick(kinectAcademyImg)} />
+                    </div>
                     <div className="kinect__academy">
                         <div class="kinect__academy--breadcrumbs">
                             <span>NAVIGATION: SETUP > KINECT ACADEMY</span>

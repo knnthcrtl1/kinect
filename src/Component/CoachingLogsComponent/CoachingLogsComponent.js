@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './CoachingLogsComponent.css';
 import Title from '../TitleComponent/TitleComponent';
+import coachingLogImg from '../../Assets/Resources/coaching_logs.jpg'
 
 export default class CoachingLogsComponent extends Component {
     render() {
+
+        const { modalImageClick } = this.props;
+
         return (
             <div className="coaching__logs">
 
@@ -14,6 +18,9 @@ export default class CoachingLogsComponent extends Component {
                 </div>
 
                 <div className="coaching__logs--content">
+                    <div class="agent_skill__skill__assignment--image output-img ">
+                        <img src={coachingLogImg} alt="" className="output-img" onClick={() => modalImageClick(coachingLogImg)} />
+                    </div>
                     <div className="coaching__logs">
                         <div class="coaching__logs--breadcrumbs">
                             <span>NAVIGATION: SETUP > COACHING LOGS</span>

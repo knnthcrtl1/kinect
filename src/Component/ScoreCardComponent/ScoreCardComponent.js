@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './ScoreCardComponent.css';
 import Title from '../TitleComponent/TitleComponent';
+import scoreCardImg from '../../Assets/Resources/score_card.jpg';
 
 export default class ScoreCardComponent extends Component {
     render() {
+
+        const { modalImageClick } = this.props;
+
         return (
             <div className="score__card">
                 <div className="score__card--title txt-center">
@@ -12,6 +16,9 @@ export default class ScoreCardComponent extends Component {
                     </Title>
                 </div>
                 <div className="score__card--content">
+                    <div class="agent_skill__skill__assignment--image output-img ">
+                        <img src={scoreCardImg} alt="" className="output-img" onClick={() => modalImageClick(scoreCardImg)} />
+                    </div>
                     <div className="score__card">
                         <div class="score__card--breadcrumbs">
                             <span>NAVIGATION: SETUP > SCORECARD</span>

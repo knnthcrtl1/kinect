@@ -1,0 +1,24 @@
+.modal__image__component--container {
+    width: 100%;
+    background-color: #fff;
+    color: #000000;
+    margin-top: 150px;
+    height: 586px;
+    z-index: 999;
+}
+
+.modal__image__component--container img {
+    width: 100%;
+    z-index: 999;
+    cursor: auto;
+}
+
+span.close__text {
+    position: absolute;
+    right: 150px;
+    top: 60px;
+    color: #fff;
+    font-size: 22px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
